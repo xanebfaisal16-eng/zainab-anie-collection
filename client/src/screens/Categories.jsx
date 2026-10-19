@@ -56,10 +56,13 @@ export default function Categories({ darkMode, lang, addToCart }) {
     return () => window.removeEventListener("storage", checkLoginStatus);
   }, []);
 
-  // Fixed filtering with .trim() to handle spaces in database brand names
+  // Robust brand filtering with .trim() and case-insensitive check
   const filteredProducts = selectedBrand === "ALL" 
     ? products 
-    : products.filter(item => item.brand?.trim().toUpperCase() === selectedBrand.toUpperCase());
+    : products.filter(item => {
+        const itemBrand = (item.brand || "").trim().toLowerCase();
+        return itemBrand === selectedBrand.trim().toLowerCase();
+      });
 
   const goldPrimary = "#d4af37";
 
