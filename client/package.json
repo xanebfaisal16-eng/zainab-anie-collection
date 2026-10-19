@@ -19,6 +19,7 @@
     "countries-list": "^3.4.1",
     "dayjs": "^1.11.23",
     "dom": "^0.0.3",
+    "firebase": "^13.0.0",
     "formik": "^2.4.9",
     "framer-motion": "^13.4.1",
     "google-map-react": "^2.2.5",
