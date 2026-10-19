@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { DB_CLOUD_URL } from "./config.js"; // ya jahan se bhi aapka URL aa raha ho
+import { DB_CLOUD_URL } from "./config.js"; // 
 
 const dbconfig = async () => {
   try {
