@@ -1,0 +1,14 @@
+back-end 
+
+admin login -----> dashboard 
+        order pending reject deliver 
+User logib  ------> oreder,   
+settings 
+
+add product products, add, update , del , fetch , reviews 
+oredrer --- reject deliver dispatched
+
+users page 
+  clcinet sugnup as a user, or vender multivenders website 
+
+  
