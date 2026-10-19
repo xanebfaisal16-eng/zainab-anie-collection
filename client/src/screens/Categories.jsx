@@ -34,8 +34,12 @@ export default function Categories({ darkMode, lang, addToCart }) {
     // 1. Load products from LocalStorage (Admin Panel / Added products)
     const localProducts = JSON.parse(localStorage.getItem("zainab_anie_products")) || [];
 
-    // 2. Fetch products dynamically from MongoDB Backend API
-    fetch("http://localhost:8080/api/v1/products")
+    // 2. Fetch products dynamically from Backend API (Supports both Localhost and Vercel Live)
+    const backendURL = window.location.hostname === "localhost" 
+      ? "http://localhost:8080" 
+      : ""; // Uses relative path on Vercel production to route through vercel.json rewrites
+
+    fetch(`${backendURL}/api/v1/products`)
       .then((res) => res.json())
       .then((data) => {
         const mongoProducts = data.products || data;
